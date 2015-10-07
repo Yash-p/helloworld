@@ -1,5 +1,5 @@
 package com.example.jchuah.myapplication;
-
+//kael's swag program cause he's chill
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
