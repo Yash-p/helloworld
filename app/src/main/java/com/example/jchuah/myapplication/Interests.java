@@ -19,10 +19,6 @@ public class Interests extends AppCompatActivity {
 
         personsinfobundle = getIntent().getBundleExtra("personsinfo");
         Log.i("creators information!", personsinfobundle.getString("name"));
-
-
-
-
     }
 
     @Override

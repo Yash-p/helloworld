@@ -12,7 +12,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+
     Bundle sendBundle = new Bundle();
+
 
     public void OnNextClick(View source)
     {
@@ -26,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(colorActivityIntent, sendBundle);
     }
-
-
 
 
     @Override
