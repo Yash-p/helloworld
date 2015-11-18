@@ -2,10 +2,22 @@ package com.example.jchuah.myapplication;
 //kael's swag program cause he's chill
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    public void OnNextClick(View source)
+    {
+        Toast.makeText(getApplicationContext(), "Next button clicked", Toast.LENGTH_LONG).show();
+    }
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

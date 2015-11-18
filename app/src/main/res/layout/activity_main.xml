@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Welcome to the future"
-        android:id="@+id/textView"
+        android:id="@+id/Texttwo"
         android:layout_below="@+id/nameinput"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
@@ -50,9 +50,10 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
+        android:text="Next"
+        android:id="@+id/Nextbutton"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="OnNextClick" />
 
 </RelativeLayout>
