@@ -1,5 +1,6 @@
 package com.example.jchuah.myapplication;
 //kael's swag program cause he's chill
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,10 +11,13 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    Bundle sendBundle = new Bundle();
 
     public void OnNextClick(View source)
     {
         Toast.makeText(getApplicationContext(), "Next button clicked", Toast.LENGTH_LONG).show();
+        Intent colorActivityIntent = new Intent(this, Interests.class);
+        startActivity(colorActivityIntent, sendBundle);
     }
 
 

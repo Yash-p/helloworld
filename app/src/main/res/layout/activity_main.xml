@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/analogClock"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="75dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -20,20 +20,21 @@
         android:text="Hello,"
         android:id="@+id/Text"
         android:textSize="30dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/analogClock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
         android:ems="10"
         android:id="@+id/nameinput"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="91dp"
+        android:textSize="20dp"
         android:layout_below="@+id/Text"
         android:layout_centerHorizontal="true"
-        android:textSize="20dp" />
+        android:hint="Name" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,19 +42,19 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Welcome to the future"
         android:id="@+id/Texttwo"
+        android:layout_marginTop="123dp"
+        android:textSize="30dp"
         android:layout_below="@+id/nameinput"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:textSize="30dp" />
+        android:layout_centerHorizontal="true" />
 
     <Button
-        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
         android:id="@+id/Nextbutton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
         android:onClick="OnNextClick" />
 
 </RelativeLayout>
