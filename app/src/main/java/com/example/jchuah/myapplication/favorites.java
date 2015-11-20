@@ -10,42 +10,48 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Interests extends AppCompatActivity {
+public class favorites extends AppCompatActivity {
 
     Bundle personsinfobundle;
 
-
-
-    public void OnNextClicktwo(View source)
+    public void OnNextClickthree(View source)
     {
 
-        Toast.makeText(getApplicationContext(), "Next button clicked to go to fav color", Toast.LENGTH_LONG).show();
-        Intent favcoloractivityintent = new Intent(this, favorites.class);
+        Toast.makeText(getApplicationContext(), "Next button clicked to go to hobbies", Toast.LENGTH_LONG).show();
+        Intent hobbiesactivityintent = new Intent(this, hobbies.class);
 
-        EditText description = (EditText)findViewById(R.id.descriptionText);
-        personsinfobundle.putString("description", description.getText().toString());
+        EditText movie = (EditText)findViewById(R.id.movie);
+        personsinfobundle.putString("movie", movie.getText().toString());
 
-        favcoloractivityintent.putExtra("personsinfo", personsinfobundle);
+        EditText song = (EditText)findViewById(R.id.song);
+        personsinfobundle.putString("song", song.getText().toString());
 
-        startActivity(favcoloractivityintent);
+        EditText youtuber = (EditText)findViewById(R.id.youtuber);
+        personsinfobundle.putString("youtuber", youtuber.getText().toString());
+
+        EditText videogame = (EditText)findViewById(R.id.videogame);
+        personsinfobundle.putString("videogame", videogame.getText().toString());
+
+        hobbiesactivityintent.putExtra("personsinfo", personsinfobundle);
+
+        startActivity(hobbiesactivityintent);
 
 
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_interests);
+        setContentView(R.layout.activity_favorites);
 
         personsinfobundle = getIntent().getBundleExtra("personsinfo");
-        Log.i("Collected data (name)", personsinfobundle.getString("name"));
+        Log.i("Collected data (desc)", personsinfobundle.getString("description"));
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_interests, menu);
+        getMenuInflater().inflate(R.menu.menu_favcolor, menu);
         return true;
     }
 

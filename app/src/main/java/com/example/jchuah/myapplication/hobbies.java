@@ -6,23 +6,32 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class favcolor extends AppCompatActivity {
+public class hobbies extends AppCompatActivity {
 
     Bundle personsinfobundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_favcolor);
+        setContentView(R.layout.activity_hobbies);
 
         personsinfobundle = getIntent().getBundleExtra("personsinfo");
-        Log.i("Collected data (desc)", personsinfobundle.getString("description"));
+        Log.i("Collected data (movie)", personsinfobundle.getString("movie"));
+
+        personsinfobundle = getIntent().getBundleExtra("personsinfo");
+        Log.i("Collected data (song)", personsinfobundle.getString("song"));
+
+        personsinfobundle = getIntent().getBundleExtra("personsinfo");
+        Log.i("Collected data (you.)", personsinfobundle.getString("youtuber"));
+
+        personsinfobundle = getIntent().getBundleExtra("personsinfo");
+        Log.i("Collected data (video)", personsinfobundle.getString("videogame"));
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_favcolor, menu);
+        getMenuInflater().inflate(R.menu.menu_hobbies, menu);
         return true;
     }
 

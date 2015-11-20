@@ -21,8 +21,12 @@
             android:label="@string/title_activity_interests" >
         </activity>
         <activity
-            android:name=".favcolor"
+            android:name=".favorites"
             android:label="@string/title_activity_favcolor" >
+        </activity>
+        <activity
+            android:name=".hobbies"
+            android:label="@string/title_activity_hobbies" >
         </activity>
     </application>
 
