@@ -3,7 +3,6 @@ package com.example.jchuah.myapplication;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,8 +16,8 @@ public class favorites extends AppCompatActivity {
     public void OnNextClickthree(View source)
     {
 
-        Toast.makeText(getApplicationContext(), "Next button clicked to go to hobbies", Toast.LENGTH_LONG).show();
-        Intent hobbiesactivityintent = new Intent(this, hobbies.class);
+        Toast.makeText(getApplicationContext(), "Next button clicked to go to displayscreen", Toast.LENGTH_LONG).show();
+        Intent hobbiesactivityintent = new Intent(this, displayscreen.class);
 
         EditText movie = (EditText)findViewById(R.id.movie);
         personsinfobundle.putString("movie", movie.getText().toString());
@@ -45,7 +44,6 @@ public class favorites extends AppCompatActivity {
         setContentView(R.layout.activity_favorites);
 
         personsinfobundle = getIntent().getBundleExtra("personsinfo");
-        Log.i("Collected data (desc)", personsinfobundle.getString("description"));
     }
 
     @Override

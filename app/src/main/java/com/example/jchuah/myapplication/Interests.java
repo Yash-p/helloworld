@@ -37,9 +37,7 @@ public class Interests extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interests);
-
         personsinfobundle = getIntent().getBundleExtra("personsinfo");
-        Log.i("Collected data (name)", personsinfobundle.getString("name"));
     }
 
     @Override

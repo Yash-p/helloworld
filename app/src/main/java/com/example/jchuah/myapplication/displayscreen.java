@@ -5,15 +5,22 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
-public class hobbies extends AppCompatActivity {
+public class displayscreen extends AppCompatActivity {
 
     Bundle personsinfobundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hobbies);
+        setContentView(R.layout.displayscreen);
+
+        personsinfobundle = getIntent().getBundleExtra("personsinfo");
+        Log.i("Collected data (name)", personsinfobundle.getString("name"));
+
+        personsinfobundle = getIntent().getBundleExtra("personsinfo");
+        Log.i("Collected data (desc)", personsinfobundle.getString("description"));
 
         personsinfobundle = getIntent().getBundleExtra("personsinfo");
         Log.i("Collected data (movie)", personsinfobundle.getString("movie"));
@@ -26,6 +33,39 @@ public class hobbies extends AppCompatActivity {
 
         personsinfobundle = getIntent().getBundleExtra("personsinfo");
         Log.i("Collected data (video)", personsinfobundle.getString("videogame"));
+
+
+
+
+        String name = personsinfobundle.getString("name");
+        String description = personsinfobundle.getString("description");
+        String movie = personsinfobundle.getString("movie");
+        String song = personsinfobundle.getString("song");
+        String youtuber = personsinfobundle.getString("youtuber");
+        String videogame = personsinfobundle.getString("videogame");
+
+        TextView nametextview = (TextView)findViewById(R.id.namedisplay);
+        nametextview.setText(name);
+
+        TextView descriptiontextview = (TextView)findViewById(R.id.descriptiondisplay);
+        descriptiontextview.setText(description);
+
+        TextView movietextview = (TextView)findViewById(R.id.moviedisplay);
+        movietextview.setText(movie);
+
+        TextView songtextview = (TextView)findViewById(R.id.songdisplay);
+        songtextview.setText(song);
+
+        TextView youtubertextview = (TextView)findViewById(R.id.youtuberdisplay);
+        youtubertextview.setText(youtuber);
+
+        TextView videogametextview = (TextView)findViewById(R.id.videogamedisplay);
+        videogametextview.setText(videogame);
+
+
+
+
+
     }
 
     @Override

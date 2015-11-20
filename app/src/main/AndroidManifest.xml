@@ -25,7 +25,7 @@
             android:label="@string/title_activity_favcolor" >
         </activity>
         <activity
-            android:name=".hobbies"
+            android:name=".displayscreen"
             android:label="@string/title_activity_hobbies" >
         </activity>
     </application>
