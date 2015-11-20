@@ -19,14 +19,14 @@ public class MainActivity extends AppCompatActivity {
     public void OnNextClick(View source)
     {
         Toast.makeText(getApplicationContext(), "Next button clicked", Toast.LENGTH_LONG).show();
-        Intent colorActivityIntent = new Intent(this, Interests.class);
+        Intent IntrestsactivityIntent = new Intent(this, Interests.class);
 
         EditText nameedittext = (EditText)findViewById(R.id.nameinput);
         sendBundle.putString("name", nameedittext.getText().toString());
 
-        colorActivityIntent.putExtra("personsinfo", sendBundle);
+        IntrestsactivityIntent.putExtra("personsinfo", sendBundle);
 
-        startActivity(colorActivityIntent, sendBundle);
+        startActivity(IntrestsactivityIntent, sendBundle);
     }
 
 
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     @Override

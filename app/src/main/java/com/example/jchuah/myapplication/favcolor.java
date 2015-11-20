@@ -1,51 +1,28 @@
 package com.example.jchuah.myapplication;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
 
-public class Interests extends AppCompatActivity {
+public class favcolor extends AppCompatActivity {
 
     Bundle personsinfobundle;
-
-
-
-    public void OnNextClicktwo(View source)
-    {
-
-        Toast.makeText(getApplicationContext(), "Next button clicked to go to fav color", Toast.LENGTH_LONG).show();
-        Intent favcoloractivityintent = new Intent(this, favcolor.class);
-
-        EditText description = (EditText)findViewById(R.id.descriptionText);
-        personsinfobundle.putString("description", description.getText().toString());
-
-        favcoloractivityintent.putExtra("personsinfo", personsinfobundle);
-
-        startActivity(favcoloractivityintent);
-
-
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_interests);
+        setContentView(R.layout.activity_favcolor);
 
         personsinfobundle = getIntent().getBundleExtra("personsinfo");
-        Log.i("Collected data (name)", personsinfobundle.getString("name"));
+        Log.i("Collected data (desc)", personsinfobundle.getString("description"));
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_interests, menu);
+        getMenuInflater().inflate(R.menu.menu_favcolor, menu);
         return true;
     }
 

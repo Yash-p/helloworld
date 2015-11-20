@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/descriptionText"
         android:layout_marginTop="80dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
@@ -28,5 +28,15 @@
         android:layout_marginTop="25dp"
         android:fontFamily="\"
         android:textSize="50dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/NextButtontwo"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:onClick="OnNextClicktwo" />
 
 </RelativeLayout>
