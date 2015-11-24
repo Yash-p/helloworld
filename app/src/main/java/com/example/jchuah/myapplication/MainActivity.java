@@ -1,6 +1,7 @@
 package com.example.jchuah.myapplication;
 //kael's swag program cause he's chill
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     Bundle sendBundle = new Bundle();
+    MediaPlayer mpAudio;
 
 
     public void OnNextClick(View source)

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Profile Creator.iml" filepath="$PROJECT_DIR$/Profile Creator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/helloworld.iml" filepath="$PROJECT_DIR$/helloworld.iml" />
       <module fileurl="file://$PROJECT_DIR$/helloworld.iml" filepath="$PROJECT_DIR$/helloworld.iml" />
-      <module fileurl="file://$PROJECT_DIR$/profile-creator.iml" filepath="$PROJECT_DIR$/profile-creator.iml" />
     </modules>
   </component>
 </project>
