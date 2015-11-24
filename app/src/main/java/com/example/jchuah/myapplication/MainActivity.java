@@ -36,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        mpAudio = MediaPlayer.create(this, R.raw.song);
+        mpAudio.setLooping(true);
+        mpAudio.start();
     }
 
     @Override

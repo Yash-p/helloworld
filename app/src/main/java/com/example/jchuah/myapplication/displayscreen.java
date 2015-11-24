@@ -1,20 +1,34 @@
 package com.example.jchuah.myapplication;
 
+import android.graphics.Movie;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 public class displayscreen extends AppCompatActivity {
 
     Bundle personsinfobundle;
+    public static final String videourl = "https://www.youtube.com/watch?v=BGLGzRXY5Bw";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.displayscreen);
+        
+        VideoView vid = (VideoView) findViewById(R.id.videoView);
+        Uri video = Uri.parse(videourl);
+        vid.setMediaController(new MediaController(this));
+        vid.setVideoURI(video);
+        vid.start();
+        vid.requestFocus();
 
         personsinfobundle = getIntent().getBundleExtra("personsinfo");
         Log.i("Collected data (name)", personsinfobundle.getString("name"));
